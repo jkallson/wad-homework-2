@@ -9,8 +9,17 @@ $(function () {
 
     ];
 
-
     init();
+
+    $("#courses-button").click(function () {
+        $(".tab").removeClass("active");
+        $("#courses-container").addClass("active")
+    });
+
+    $("#profile-button").click(function () {
+        $(".tab").removeClass("active");
+        $("#profile-container").addClass("active")
+    });
 
     
     function init() {
