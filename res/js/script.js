@@ -8,4 +8,13 @@ $(function () {
         new Course("Estonian language Level A2","2","65")
 
     ];
+    init();
+    
+    function init() {
+        $("#name").text(user.firstname +" "+ user.lastname);
+        $("#birthdate").text(user.birthdate);
+        $("#faculty").text(user.faculity);
+
+
+    }
 });
