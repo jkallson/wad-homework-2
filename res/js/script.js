@@ -21,6 +21,9 @@ $(function () {
         $("#profile-container").addClass("active")
     });
 
+    $("#add-course-button").click(function () {
+        $("#add-course").toggle();
+    });
     
     function init() {
         $("#name").text(user.firstname +" "+ user.lastname);
