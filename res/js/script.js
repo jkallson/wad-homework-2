@@ -4,17 +4,35 @@ $(function () {
     var courses = [
         new Course("Agile software development","1","82"),
         new Course("System modeling","1","85"),
-        new Course("Object-orientated programming","2","99"),
+        new Course("Object-orientated programming","2","109"),
         new Course("Estonian language Level A2","2","65")
 
     ];
+
+
     init();
+
     
     function init() {
         $("#name").text(user.firstname +" "+ user.lastname);
         $("#birthdate").text(user.birthdate);
         $("#faculty").text(user.faculity);
 
+        let table = $("#courses");
+        table.find("tbody tr").remove();
+        for (let i = 0; i < courses.length; i++) {
+            let tr = $("<tr></tr>");
+            let th1 = $("<td>").text(i+1);
+            let th2 = $("<td>").text(courses[i].title);
+            let th3 = $("<td>").text(courses[i].semester);
+            let th4 =$("<td>").text(courses[i].grade);
 
+            tr.append(th1);
+            tr.append(th2);
+            tr.append(th3);
+            tr.append(th4);
+
+            table.append(tr);
+        }
     }
 });
