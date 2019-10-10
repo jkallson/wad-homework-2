@@ -30,6 +30,14 @@ $(function () {
         $("#add-course").toggle();
     });
 
+    $('#cancel-course').click(function () {
+        $("#title").val("");
+        $("#semester").val("");
+        $("#grade").val("");
+
+        $("#add-course").toggle();
+    });
+
     $("#save-course").click(function () {
         let table = $("#courses");
         let courseTitle = $("#title");
