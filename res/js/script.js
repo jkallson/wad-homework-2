@@ -29,6 +29,35 @@ $(function () {
     $("#add-course-button").click(function () {
         $("#add-course").toggle();
     });
+
+    $("#save-course").click(function () {
+        let table = $("#courses");
+        let courseTitle = $("#title").val();
+        let semester = $("#semester").val();
+        let grade = $("#grade").val();
+        let lastId = $("#courses tr:last").find("td:first").html();
+
+        let tr = $("<tr></tr>");
+        let td1 = $("<td></td>").text(parseInt(lastId)+1);
+        let td2 = $("<td></td>").text(courseTitle);
+        let td3 = $("<td></td>").text(semester);
+        let td4 = $("<td></td>").text(grade);
+
+        tr.append((td1));
+        tr.append((td2));
+        tr.append((td3));
+        tr.append((td4));
+
+        table.append(tr);
+
+        $("#title").val("");
+        $("#semester").val("");
+        $("#grade").val("");
+
+        $("#add-course").toggle();
+
+    });
+
     
     function init() {
         $("#name").text(user.firstname +" "+ user.lastname);
