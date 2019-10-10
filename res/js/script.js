@@ -13,12 +13,17 @@ $(function () {
 
     $("#courses-button").click(function () {
         $(".tab").removeClass("active");
-        $("#courses-container").addClass("active")
+        $("#courses-container").addClass("active");
+        $("#courses-button").addClass("active");
+        $("#profile-button").removeClass("active");
+
     });
 
     $("#profile-button").click(function () {
         $(".tab").removeClass("active");
-        $("#profile-container").addClass("active")
+        $("#profile-container").addClass("active");
+        $("#courses-button").removeClass("active");
+        $("#profile-button").addClass("active");
     });
 
     $("#add-course-button").click(function () {
