@@ -66,7 +66,6 @@ $(function () {
 
         $("#courses tr td:nth-child(4)").each(function() {
             let gradeValue = $(this).text();
-            console.log(gradeValue);
             if (gradeValue > 90)  gradePoint = 4;
             else if (gradeValue > 80)  gradePoint = 3;
             else if (gradeValue > 70)  gradePoint = 2;
@@ -74,7 +73,6 @@ $(function () {
             else if (gradeValue > 50)  gradePoint = 0.5;
             else if (gradeValue <= 50)  gradePoint = 0;
 
-            console.log(gradePoint);
             pointSum += parseFloat(gradePoint);
         });
 
